@@ -6,7 +6,7 @@ window.App = Ember.Application.create
 App.ApplicationAdapter = DS.RESTAdapter.extend
   host: 'https://api.github.com'
   headers:
-    Authorization: 'token ca428d2041cf284df5a75184d14ed7fd99400b03'
+    Authorization: 'token YOUR_API_TOKEN'
 
 App.ApplicationSerializer = DS.RESTSerializer.extend
   keyForAttribute: (attr) ->

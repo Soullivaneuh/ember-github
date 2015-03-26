@@ -1,0 +1,38 @@
+{{! TODO: Use EmblemJS (http://emblemjs.com/) }}
+
+<div class="wrapper">
+    <header class="main-header">
+        {{#link-to 'index' class='logo'}}<b>Ember Github</b>{{/link-to}}
+        <nav class="navbar navbar-static-top" role="navigation">
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+        </nav>
+    </header>
+
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <ul class="sidebar-menu">
+                <li>{{#link-to 'repositories'}}Repositories{{/link-to}}</li>
+                <li>{{#link-to 'gists'}}Gists{{/link-to}}</li>
+            </ul>
+        </section>
+    </aside>
+
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                Dashboard
+                <small>Choose a section</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+            </ol>
+        </section>
+
+        <section class="content">
+            {{outlet}}
+        </section>
+    </div>
+</div>

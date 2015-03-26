@@ -1,0 +1,36 @@
+<h2>Repositories list</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            {{#each repository in controller}}
+                <div class="col-md-6">
+                    <div class="box box-solid box-default collapsed-box">
+                        <div class="box-header">
+                            <h5 class="box-title">
+                                <i class="fa fa-server"></i>
+                                {{ repository.fullName }}
+                            </h5>
+                            <div class="box-tools pull-right">
+                                <button class="btn btn-default btn-sm" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body" style="display: none">
+                            <p class="lead">{{ repository.description }}</p>
+                            <dl class="dl-horizontal">
+                                <dt>ID</dt> <dd>{{ repository.id }}</dd>
+                                <dt>Fork</dt> <dd>{{ repository.fork }}</dd>
+                                <dt>Private</dt> <dd>{{ repository.private }}</dd>
+                                <dt>Link</dt> <dd><a {{ bind-attr href=repository.htmlUrl }}>{{ repository.htmlUrl }}</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        {{outlet}}
+    </div>
+</div>

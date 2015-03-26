@@ -1,0 +1,11 @@
+{
+  "name": "ember-github",
+  "dependencies": {
+    "jquery": "^2.0",
+    "bootstrap": "^3.3",
+    "font-awesome": "^4.3",
+    "admin-lte": "^2.0",
+    "ember": "^1.10",
+    "ember-data": "^1.0"
+  }
+}
